@@ -1,0 +1,12 @@
+{% extends "about.html"%}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+{% block content %}
+    <div class="bg-light p-5 rounded mt-3">
+    <h1>{{title}}</h1>
+    <p class="lead">{{array}}</p>
+    <a class="btn btn-danger" href="{% url 'language' %}" role="button">Back to languages</a>
+  </div>
+{% endblock %}

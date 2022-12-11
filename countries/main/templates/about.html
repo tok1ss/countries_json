@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+  <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <div class="d-inline-flex mt-3 mt-md-3 ms-md-auto">
+        <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+            <a class="btn btn-secondary" href="/" role="button">MAIN</a>
+            <a class="btn btn-secondary" href="http://127.0.0.1:8000/languages" role="button">LANGUAGES</a>
+            <a class="btn btn-secondary" href="http://127.0.0.1:8000/countries" role="button">COUNTRIES</a>
+        </div>
+          <nav class="d-inline-flex mt-2 mt-md-3 ms-md-auto">
+            {% block alphabet %} {% endblock %}
+        </nav>
+      </div>
+    </div>
+    {% block content %} {% endblock %}
+  </body>
+</html>
